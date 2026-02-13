@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grow AI Agency — Build a High-Ticket AI Business</title>
+<meta name="description" content="Discover how entrepreneurs are building $50K-$250K/month AI agencies using our proven system. Limited spots available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a24;--surface:#22222e;
+--border:#2a2a3a;--text:#e8e8ed;--text2:#9a9ab0;--text3:#6a6a80;
+--accent:#6c5ce7;--accent2:#a29bfe;--accent-glow:rgba(108,92,231,.15);
+--gold:#f0c040;--green:#00d68f;--red:#ff6b6b;
+--radius:12px;--radius-lg:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2);text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ─── HERO ─── */
+.hero{padding:100px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(108,92,231,.08) 0%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-glow);border:1px solid rgba(108,92,231,.3);border-radius:100px;padding:8px 20px;font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:28px;letter-spacing:.5px;text-transform:uppercase}
+.badge span{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.12;margin-bottom:24px;letter-spacing:-.02em;max-width:900px;margin-left:auto;margin-right:auto}
+.hero h1 .highlight{background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{font-size:clamp(17px,2.2vw,21px);color:var(--text2);max-width:680px;margin:0 auto 40px;line-height:1.65}
+.hero .sub strong{color:var(--text);font-weight:600}
+
+/* ─── CTA BUTTON ─── */
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),#7c5ce7);color:#fff;font-size:18px;font-weight:700;padding:18px 40px;border-radius:100px;border:none;cursor:pointer;transition:all .25s;box-shadow:0 4px 24px rgba(108,92,231,.35);letter-spacing:.3px}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(108,92,231,.5)}
+.cta-btn svg{width:20px;height:20px;fill:currentColor}
+.cta-sub{font-size:13px;color:var(--text3);margin-top:12px}
+
+/* ─── TRUST BAR ─── */
+.trust-bar{padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
+.trust-bar p{font-size:13px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;font-weight:600}
+.trust-logos{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;opacity:.45}
+.trust-logos span{font-size:18px;font-weight:700;color:var(--text2);letter-spacing:1px}
+
+/* ─── SECTION COMMON ─── */
+.section{padding:80px 0}
+.section-label{font-size:13px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;text-align:center}
+.section-title{font-size:clamp(26px,3.5vw,40px);font-weight:800;text-align:center;margin-bottom:16px;letter-spacing:-.01em}
+.section-sub{font-size:17px;color:var(--text2);text-align:center;max-width:600px;margin:0 auto 48px}
+
+/* ─── VIDEO SECTION ─── */
+.video-section{background:var(--bg2);padding:80px 0}
+.learn-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:800px;margin:0 auto 40px}
+.learn-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text2)}
+.learn-item .check{color:var(--green);font-weight:700;font-size:18px;flex-shrink:0;margin-top:1px}
+
+/* VIDEO PLACEHOLDER */
+.video-wrapper{max-width:800px;margin:0 auto;background:var(--bg3);border:2px dashed var(--border);border-radius:var(--radius-lg);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--text3)}
+.video-wrapper svg{width:64px;height:64px;opacity:.3}
+.video-wrapper p{font-size:14px}
+
+/* ─── SOCIAL PROOF ─── */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testimonial{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px}
+.testimonial .stars{color:var(--gold);font-size:16px;margin-bottom:16px;letter-spacing:2px}
+.testimonial .quote{font-size:16px;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testimonial .author{display:flex;align-items:center;gap:12px}
+.testimonial .avatar{width:44px;height:44px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent2);font-size:16px}
+.testimonial .name{font-weight:600;font-size:15px}
+.testimonial .role{font-size:13px;color:var(--text3)}
+.testimonial .result{display:inline-block;margin-top:12px;background:rgba(0,214,143,.1);color:var(--green);font-size:13px;font-weight:600;padding:4px 12px;border-radius:100px}
+
+/* ─── GUARANTEE ─── */
+.guarantee{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.guarantee-inner{display:flex;align-items:center;gap:40px;max-width:800px;margin:0 auto}
+.guarantee-badge{flex-shrink:0;width:140px;height:140px;border-radius:50%;border:3px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.guarantee-badge .num{font-size:36px;font-weight:800;color:var(--gold);line-height:1}
+.guarantee-badge .lbl{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px}
+.guarantee-text h3{font-size:24px;font-weight:700;margin-bottom:12px}
+.guarantee-text p{color:var(--text2);font-size:16px;line-height:1.7}
+@media(max-width:600px){.guarantee-inner{flex-direction:column;text-align:center}.guarantee-badge{width:110px;height:110px}}
+
+/* ─── FAQ ─── */
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;color:var(--text);font-size:17px;font-weight:600;padding:20px 0;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-q::after{content:'+';font-size:24px;color:var(--text3);transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--accent2)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 20px;color:var(--text2);font-size:15px;line-height:1.7}
+
+/* ─── QUALIFYING FLOW MODAL ─── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:1000;display:none;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.active{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);max-width:540px;width:100%;padding:48px 40px;position:relative;animation:modalIn .3s}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text3);font-size:24px;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background .2s}
+.modal-close:hover{background:var(--surface)}
+.modal .progress{display:flex;gap:6px;margin-bottom:32px}
+.modal .progress .dot{height:4px;flex:1;border-radius:4px;background:var(--surface);transition:background .3s}
+.modal .progress .dot.done{background:var(--accent)}
+.modal h2{font-size:22px;font-weight:700;margin-bottom:8px}
+.modal .step-sub{color:var(--text2);font-size:14px;margin-bottom:28px}
+.modal .options{display:flex;flex-direction:column;gap:10px}
+.modal .opt-btn{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:16px 20px;color:var(--text);font-size:15px;font-weight:500;cursor:pointer;text-align:left;transition:all .2s;font-family:inherit}
+.modal .opt-btn:hover{border-color:var(--accent);background:var(--accent-glow)}
+.modal .form-group{margin-bottom:16px}
+.modal .form-group label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.modal .form-group input{width:100%;padding:14px 16px;border-radius:var(--radius);border:2px solid var(--border);background:var(--surface);color:var(--text);font-size:15px;font-family:inherit;transition:border-color .2s}
+.modal .form-group input:focus{outline:none;border-color:var(--accent)}
+.modal .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent),#7c5ce7);color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:700;cursor:pointer;margin-top:8px;font-family:inherit;transition:all .2s}
+.modal .submit-btn:hover{box-shadow:0 4px 24px rgba(108,92,231,.4)}
+.modal .submit-btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* RESULT SCREENS */
+.result-screen{text-align:center}
+.result-screen .icon{font-size:48px;margin-bottom:16px}
+.result-screen h2{font-size:26px;margin-bottom:12px}
+.result-screen p{color:var(--text2);font-size:16px;line-height:1.65;margin-bottom:28px}
+.result-screen .cta-btn{font-size:16px;padding:16px 36px}
+
+/* ─── EXIT INTENT POPUP ─── */
+.exit-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px}
+.exit-overlay.active{display:flex}
+.exit-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);max-width:480px;width:100%;padding:48px 40px;text-align:center;animation:modalIn .3s}
+.exit-box h2{font-size:24px;font-weight:800;margin-bottom:12px}
+.exit-box p{color:var(--text2);font-size:15px;margin-bottom:24px;line-height:1.6}
+.exit-box input{width:100%;padding:14px 16px;border-radius:var(--radius);border:2px solid var(--border);background:var(--surface);color:var(--text);font-size:15px;margin-bottom:12px;font-family:inherit}
+.exit-box input:focus{outline:none;border-color:var(--accent)}
+.exit-box .submit-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),#7c5ce7);color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:700;cursor:pointer;font-family:inherit}
+.exit-box .skip{display:block;margin-top:16px;color:var(--text3);font-size:13px;cursor:pointer;background:none;border:none;font-family:inherit}
+
+/* ─── STICKY CTA ─── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,15,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:16px 24px;z-index:900;display:flex;align-items:center;justify-content:center;gap:16px;transform:translateY(100%);transition:transform .3s}
+.sticky-cta.visible{transform:none}
+.sticky-cta p{font-size:14px;color:var(--text2);display:none}
+@media(min-width:640px){.sticky-cta p{display:block}}
+.sticky-cta .cta-btn{padding:14px 28px;font-size:15px}
+
+/* ─── FOOTER ─── */
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--text3);font-size:13px}
+footer a{color:var(--text3)}
+footer a:hover{color:var(--text)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+.hero{padding:80px 0 48px}
+.section{padding:60px 0}
+.modal{padding:36px 24px}
+.testimonials{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+<div class="container">
+<div class="badge"><span></span> Limited Spots Available</div>
+<h1>Build a <span class="highlight">$50K–$250K/Month</span> AI Agency in the Next 90 Days — Without Writing a Single Line of Code</h1>
+<p class="sub">Forbes projects AI will be a <strong>$1.3 trillion market</strong> by 2032 — and businesses are desperate for help adopting it. We'll show you the exact system our clients use to land <strong>$5K–$25K/month retainers</strong> from day one.</p>
+<button class="cta-btn" onclick="openQualifier()">See If You Qualify <svg viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg></button>
+<p class="cta-sub">Free strategy session · No obligation · Results-backed guarantee</p>
+</div>
+</section>
+
+<!-- ═══════════════════ TRUST BAR ═══════════════════ -->
+<div class="trust-bar">
+<div class="container">
+<p>As Featured In</p>
+<div class="trust-logos">
+<span>FORBES</span>
+<span>BUSINESS INSIDER</span>
+<span>ENTREPRENEUR</span>
+<span>INC.</span>
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════ VIDEO SECTION ═══════════════════ -->
+<section class="video-section">
+<div class="container">
+<p class="section-label">Free Training</p>
+<h2 class="section-title">What You'll Discover in This Presentation</h2>
+<div class="learn-list">
+<div class="learn-item"><span class="check">✓</span> Why 72% of businesses plan to adopt AI by 2025 — and can't find anyone to help them</div>
+<div class="learn-item"><span class="check">✓</span> The 3-step system to sign your first $5K+ client within 30 days</div>
+<div class="learn-item"><span class="check">✓</span> How to deliver enterprise-grade AI solutions with zero technical background</div>
+<div class="learn-item"><span class="check">✓</span> The pricing framework that positions you at $15K–$25K per engagement</div>
+<div class="learn-item"><span class="check">✓</span> Real case studies from our clients — including one who hit $83K/month in 90 days</div>
+<div class="learn-item"><span class="check">✓</span> Why this window of opportunity is closing fast — and how to move now</div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  VIDEO EMBED PLACEHOLDER                             ║
+     ║  Replace this entire div with your Vidalytics or     ║
+     ║  preferred video player embed code.                  ║
+     ║  Recommended: keep max-width:800px, 16:9 ratio.     ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<div class="video-wrapper" id="video-placeholder">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+<p>[ Video embed goes here — replace this div ]</p>
+</div>
+<!-- END VIDEO PLACEHOLDER -->
+
+</div>
+</section>
+
+<!-- ═══════════════════ SOCIAL PROOF ═══════════════════ -->
+<section class="section">
+<div class="container">
+<p class="section-label">Client Results</p>
+<h2 class="section-title">Real People. Real Results.</h2>
+<p class="section-sub">Our clients come from all backgrounds — what they share is the drive to build something meaningful with AI.</p>
+<div class="testimonials">
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p class="quote">"Within 60 days I had three retainer clients paying $8K/month each. The system works exactly as described — I just followed the playbook."</p>
+<div class="author">
+<div class="avatar">MR</div>
+<div><div class="name">Michael R.</div><div class="role">Former Marketing Director</div></div>
+</div>
+<div class="result">$24K/mo in 60 days</div>
+</div>
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p class="quote">"I was skeptical — I have zero tech background. But the done-for-you AI tools and sales scripts made it plug and play. Best investment I've made."</p>
+<div class="author">
+<div class="avatar">SL</div>
+<div><div class="name">Sarah L.</div><div class="role">Agency Owner</div></div>
+</div>
+<div class="result">$83K/mo in 90 days</div>
+</div>
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p class="quote">"The community and mentorship alone are worth 10x the investment. I went from corporate burnout to running a lean, profitable AI agency."</p>
+<div class="author">
+<div class="avatar">JT</div>
+<div><div class="name">James T.</div><div class="role">Ex-Corporate Professional</div></div>
+</div>
+<div class="result">$41K/mo in 75 days</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════ GUARANTEE ═══════════════════ -->
+<section class="guarantee section">
+<div class="container">
+<div class="guarantee-inner">
+<div class="guarantee-badge">
+<div class="num">90</div>
+<div class="lbl">Day</div>
+<div class="lbl">Guarantee</div>
+</div>
+<div class="guarantee-text">
+<h3>Our 90-Day ROI-or-Refund Guarantee</h3>
+<p>Follow the system, do the work, and if you haven't signed your first paying AI client within 90 days, we'll refund your entire investment. No hoops, no fine print. We take on the risk because we know this works — and we only want to work with people who are serious about results.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════ CTA BREAK ═══════════════════ -->
+<section class="section" style="text-align:center;padding:60px 0">
+<div class="container">
+<h2 class="section-title">Ready to Build Your AI Agency?</h2>
+<p class="section-sub">Spots are limited to ensure every client gets hands-on support. See if you qualify for our next cohort.</p>
+<button class="cta-btn" onclick="openQualifier()">Apply Now — See If You Qualify <svg viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg></button>
+</div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="section" style="background:var(--bg2)">
+<div class="container">
+<p class="section-label">FAQ</p>
+<h2 class="section-title">Common Questions</h2>
+<p class="section-sub">Everything you need to know before applying.</p>
+<div class="faq-list">
+<div class="faq-item"><button class="faq-q">Do I need technical skills or coding experience?</button><div class="faq-a"><p>Not at all. Our system uses no-code AI tools and done-for-you templates. Most of our top-performing clients come from non-technical backgrounds — sales, marketing, consulting, and corporate roles.</p></div></div>
+<div class="faq-item"><button class="faq-q">How is this different from other AI courses?</button><div class="faq-a"><p>This isn't a course — it's a complete business system. You get the tools, the sales scripts, the fulfillment frameworks, and ongoing mentorship. We're in the trenches with you, not just selling information.</p></div></div>
+<div class="faq-item"><button class="faq-q">How much time do I need to commit?</button><div class="faq-a"><p>Most clients start part-time (10-15 hours/week) alongside their current role, then transition full-time once revenue exceeds their salary. The system is designed for busy professionals.</p></div></div>
+<div class="faq-item"><button class="faq-q">What's the investment?</button><div class="faq-a"><p>We offer several tiers depending on your goals and the level of support you need. Investment details are shared on the strategy call after we confirm you're a good fit. This ensures we only work with committed partners.</p></div></div>
+<div class="faq-item"><button class="faq-q">What if it doesn't work for me?</button><div class="faq-a"><p>Our 90-day guarantee means you're fully protected. Follow the system, implement what we teach, and if you don't land a paying client, you get a full refund. We stand behind our results.</p></div></div>
+<div class="faq-item"><button class="faq-q">How quickly can I expect results?</button><div class="faq-a"><p>Our fastest clients sign their first client within 2-3 weeks. The average is 30-45 days. Results depend on your effort, but our system is designed to compress the timeline dramatically.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+<div class="container">
+<p>&copy; 2026 Grow AI Agency. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+<p style="margin-top:8px">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of META, Inc.</p>
+</div>
+</footer>
+
+<!-- ═══════════════════ STICKY CTA ═══════════════════ -->
+<div class="sticky-cta" id="stickyCta">
+<p>Limited spots remaining for the next cohort →</p>
+<button class="cta-btn" onclick="openQualifier()">Apply Now</button>
+</div>
+
+<!-- ═══════════════════ QUALIFIER MODAL ═══════════════════ -->
+<div class="modal-overlay" id="qualifierModal">
+<div class="modal">
+<button class="modal-close" onclick="closeQualifier()">×</button>
+<div class="progress" id="progressDots"></div>
+<div id="qualifierContent"></div>
+</div>
+</div>
+
+<!-- ═══════════════════ EXIT INTENT POPUP ═══════════════════ -->
+<div class="exit-overlay" id="exitPopup">
+<div class="exit-box">
+<button class="modal-close" onclick="closeExit()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text3);font-size:24px;cursor:pointer">×</button>
+<h2>Wait — Don't Miss This</h2>
+<p>Get our free guide: <strong>"5 AI Services You Can Sell for $5K+ Each"</strong> — even if you have zero technical skills.</p>
+<input type="email" id="exitEmail" placeholder="Enter your best email">
+<button class="submit-btn" onclick="captureExitEmail()">Send Me the Free Guide</button>
+<button class="skip" onclick="closeExit()">No thanks, I don't want free strategies</button>
+</div>
+</div>
+
+<script>
+/* ─── FAQ ACCORDION ─── */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});
+    item.classList.toggle('open');
+  });
+});
+
+/* ─── STICKY CTA ─── */
+let lastScroll=0;
+window.addEventListener('scroll',()=>{
+  const s=document.getElementById('stickyCta');
+  if(window.scrollY>600){s.classList.add('visible')}else{s.classList.remove('visible')}
+});
+
+/* ─── QUALIFIER FLOW ─── */
+const STEPS=[
+  {q:"What best describes you?",sub:"Help us personalize your experience.",opts:[
+    {text:"Business Owner",pts:3},{text:"Agency Owner",pts:4},{text:"Aspiring Entrepreneur",pts:1},{text:"Corporate Professional",pts:2}
+  ]},
+  {q:"What's your current monthly revenue?",sub:"This helps us understand where you are today.",opts:[
+    {text:"Under $10K",pts:1},{text:"$10K – $50K",pts:2},{text:"$50K – $250K",pts:3},{text:"$250K+",pts:4}
+  ]},
+  {q:"How soon are you looking to start?",sub:"Timing matters — our cohorts fill up fast.",opts:[
+    {text:"Immediately",pts:4},{text:"Within 30 Days",pts:3},{text:"1–3 Months",pts:2},{text:"Just Exploring",pts:1}
+  ]},
+  {q:"What's your investment capacity for a proven business system?",sub:"We want to make sure we can genuinely help you.",opts:[
+    {text:"Under $5K",pts:1},{text:"$5K – $15K",pts:2},{text:"$15K – $25K",pts:3},{text:"$25K+",pts:4}
+  ]}
+];
+let currentStep=0,score=0,leadData={};
+
+function openQualifier(){
+  currentStep=0;score=0;leadData={};
+  document.getElementById('qualifierModal').classList.add('active');
+  document.body.style.overflow='hidden';
+  renderStep();
+}
+function closeQualifier(){
+  document.getElementById('qualifierModal').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+function renderProgress(){
+  const total=STEPS.length+1;
+  let html='';
+  for(let i=0;i<total;i++) html+=`<div class="dot ${i<=currentStep?'done':''}"></div>`;
+  document.getElementById('progressDots').innerHTML=html;
+}
+
+function renderStep(){
+  renderProgress();
+  const c=document.getElementById('qualifierContent');
+  if(currentStep<STEPS.length){
+    const s=STEPS[currentStep];
+    c.innerHTML=`<h2>${s.q}</h2><p class="step-sub">${s.sub}</p><div class="options">${s.opts.map((o,i)=>`<button class="opt-btn" onclick="selectOption(${i})">${o.text}</button>`).join('')}</div>`;
+  } else {
+    // Contact info step
+    c.innerHTML=`<h2>Almost there — tell us about yourself</h2><p class="step-sub">So we can prepare your personalized strategy.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" id="qName" placeholder="John Smith"></div>
+    <div class="form-group"><label>Email</label><input type="email" id="qEmail" placeholder="john@company.com"></div>
+    <div class="form-group"><label>Phone</label><input type="tel" id="qPhone" placeholder="(555) 123-4567"></div>
+    <button class="submit-btn" onclick="submitQualifier()">Get My Results →</button>`;
+  }
+}
+
+function selectOption(i){
+  score+=STEPS[currentStep].opts[i].pts;
+  leadData[`q${currentStep+1}`]=STEPS[currentStep].opts[i].text;
+  currentStep++;
+  renderStep();
+}
+
+function submitQualifier(){
+  const name=document.getElementById('qName').value.trim();
+  const email=document.getElementById('qEmail').value.trim();
+  const phone=document.getElementById('qPhone').value.trim();
+  if(!name||!email){alert('Please fill in your name and email.');return;}
+  leadData.name=name;leadData.email=email;leadData.phone=phone;leadData.score=score;
+
+  // Log to console (integrate with your CRM / webhook here)
+  console.log('LEAD DATA:',JSON.stringify(leadData));
+
+  const c=document.getElementById('qualifierContent');
+  const THRESHOLD=11; // max 16, threshold ~11 = qualified
+
+  if(score>=THRESHOLD){
+    c.innerHTML=`<div class="result-screen">
+      <div class="icon">🎯</div>
+      <h2>Great News — You Qualify!</h2>
+      <p>Based on your answers, you're an excellent fit for our program. The next step is a free strategy call where we'll map out a custom plan for your AI agency.</p>
+      <!-- ══════════════════════════════════════════
+           CALENDLY LINK PLACEHOLDER
+           Replace the href below with your Calendly
+           or scheduling tool link.
+           ══════════════════════════════════════════ -->
+      <a href="https://calendly.com/PLACEHOLDER" target="_blank" class="cta-btn" style="text-decoration:none">Book Your Strategy Call →</a>
+      <p style="margin-top:16px;font-size:13px;color:var(--text3)">Limited slots this week — choose a time that works for you.</p>
+    </div>`;
+  } else {
+    c.innerHTML=`<div class="result-screen">
+      <div class="icon">📚</div>
+      <h2>Thanks, ${name.split(' ')[0]}!</h2>
+      <p>Based on where you are right now, we recommend starting with our free training to build your foundation. It covers exactly how the AI agency model works and what's possible.</p>
+      <!-- ══════════════════════════════════════════
+           FREE TRAINING LINK PLACEHOLDER
+           Replace the href below with your free
+           training / webinar registration link.
+           ══════════════════════════════════════════ -->
+      <a href="https://PLACEHOLDER-FREE-TRAINING-LINK" target="_blank" class="cta-btn" style="text-decoration:none;background:linear-gradient(135deg,#00d68f,#00b377)">Join the Free Training →</a>
+    </div>`;
+  }
+  document.getElementById('progressDots').innerHTML='';
+}
+
+/* ─── EXIT INTENT ─── */
+let exitShown=false;
+document.addEventListener('mouseout',e=>{
+  if(e.clientY<5&&!exitShown&&!document.getElementById('qualifierModal').classList.contains('active')){
+    exitShown=true;
+    document.getElementById('exitPopup').classList.add('active');
+    document.body.style.overflow='hidden';
+  }
+});
+function closeExit(){
+  document.getElementById('exitPopup').classList.remove('active');
+  document.body.style.overflow='';
+}
+function captureExitEmail(){
+  const email=document.getElementById('exitEmail').value.trim();
+  if(!email){alert('Please enter your email.');return;}
+  console.log('EXIT LEAD:',email);
+  document.querySelector('.exit-box').innerHTML=`<div class="icon" style="font-size:48px;margin-bottom:16px">✅</div><h2>Check Your Inbox!</h2><p style="color:var(--text2);margin-top:12px">We just sent the guide to <strong>${email}</strong>.</p><button class="skip" onclick="closeExit()" style="margin-top:20px">Close</button>`;
+}
+</script>
+</body>
+</html>
